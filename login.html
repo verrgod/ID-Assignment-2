@@ -3,10 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="login.css">
         <title>My Page</title>
     </head>
-
     <body>
         <div class="nav-container">
             <nav class="navbar">
@@ -18,7 +17,7 @@
                 </div>
 
                 <ul class="nav-menu">
-                    <li><a href="#" class="nav-links">Home</a></li>
+                    <li><a href="index.html" class="nav-links">Home</a></li>
                     <li><a href="service.html" class="nav-links">Service</a></li>
                     <li><a href="contact.html" class="nav-links">Contact Us</a></li>
                     <li><a href="about.html" class="nav-links">About Us</a></li>
@@ -31,7 +30,7 @@
                     <h1>Find parking slots near you!</h1>
                 </br>
                     <p>ParkingMaps allows you to locate parking slots in your vicinity.</p>
-                    <button class="main-btn"><a href="#">Get Started</a></button>
+                    <button class="main-btn"><a href="index.html">Get Started</a></button>
                 </div>
                 <div class="main-img-container">
                     <img src="images/carnav.svg" alt="" id="main-img">
@@ -46,25 +45,18 @@
                 </div>
                 <div class="modal-content-right">
                     <form action="/" method="GET" class="modal-form" id="form">
-                        <h1>Get started with us today! Create your account here.</h1>
+                        <h1>Already a member? Login here.</h1>
                         <div class="form-validation">
-                            <input type="text" class="modal-input" id="name" name="name" placeholder="Enter your name">
+                            <input type="email" class="modal-input" id="login-email" name="email" placeholder="Enter your email">
                             <p>Error Message</p>    
                         </div>
                         <div class="form-validation">
-                            <input type="email" class="modal-input" id="email" name="email" placeholder="Enter your email">
+                            <input type="password" class="modal-input" id="login-password" name="password" placeholder="Enter your password">
                             <p>Error Message</p>    
                         </div>
-                        <div class="form-validation">
-                            <input type="password" class="modal-input" id="password" name="password" placeholder="Enter your password">
-                            <p>Error Message</p>    
-                        </div>
-                        <div class="form-validation">
-                            <input type="password" class="modal-input" id="password-confirm" name="password" placeholder="Confirm your password">
-                            <p>Error Message</p>    
-                        </div>
-                        <input type="submit" class="modal-input-btn" value="Sign Up" onClick="storeSignup()">
-                        <span class="modal-input-login">Already have an account? Login <a href="login.html">here</a></span>
+                        <input type="submit" class="modal-input-btn" value="Login" onClick="checkSignup()">
+                        <span class="modal-input-login"><a href="login.html">Forgot your password?</a></span>
+                        <span class="modal-input-login">Don't have an account yet? Sign up <a href="index.html">here!</a></span>
                     </form>
                 </div>
             </div>
