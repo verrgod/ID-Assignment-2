@@ -167,10 +167,17 @@
     }
 }
 
+@media screen and (max-width: 640px){
+    .modal-content{
+        margin: 18% auto;
+        height: 72%;
+        width: 80%;
+    }
+}
 @media screen and (max-width: 576px){
     .modal-content{
         margin: 20% auto;
-        height: 80%;
+        height: 70%;
         width: 90%;
     }
 }

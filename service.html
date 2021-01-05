@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="style.css">
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' type='text/css' />
         <style>
 	        body { margin: 0; padding: 0; }
 	        #map { position: absolute; top: 6rem; bottom: 0; width: 100%; height: 80%; }
@@ -42,9 +44,8 @@
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [-96, 37.8], // starting position
-        zoom: 3 // starting zoom
+        zoom: 12 // starting zoom
         });
-         
         // Add geolocate control to the map.
         map.addControl(
         new mapboxgl.GeolocateControl({
@@ -54,6 +55,26 @@
         trackUserLocation: true
         })
         );
+        var geocoder = new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            placeholder: 'Search for a place',
+            mapboxgl: mapboxgl,
+            marker: true,
+        });
+        map.addControl(geocoder, 'top-left');
+        map.on('load', function(){
+            map.addSource('single-point', {
+                type: 'geojson',
+                data: {
+                    type: 'FeatureCollection',
+                    features: []
+                }
+            });
+
+            geocoder.on('result', function(e) {
+                map.getSource('single-point').setData(e.result.geometry);
+            });
+        });
         </script>
         <div class="main">
             <div class="main-container">
@@ -75,7 +96,7 @@
 
                 <div class="footer-heading footer-3">
                     <h2>SOCIAL MEDIA</h2>
-                    <a href="#">Facebook</a>    
+                    <a href="https://www.facebook.com/WeKeepYourWorldMoving/">Facebook</a>    
                     <a href="#">YouTube</a>    
                     <a href="#">Instagram</a>    
                 </div>
