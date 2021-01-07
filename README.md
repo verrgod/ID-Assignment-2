@@ -100,13 +100,13 @@ As explained from the introduction, this is a website that allows any user with 
     * Privacy policy - https://www.privacypolicygenerator.info
     * Current location service - https://docs.mapbox.com/mapbox-gl-js/example/locate-user/
     * Map navigation controls - https://docs.mapbox.com/mapbox-gl-js/example/navigation/
-    * Geocoder (search bar) - https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
+    * Geocoder (local search bar) - https://docs.mapbox.com/help/tutorials/local-search-geocoding-api/
     * Directions - https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-directions/
     
   * Media
     * Images used on this site were obtained from https://undraw.co
     
   * Acknowledgements
-    * I received inspiration for this project from Brian Design
+    * I received inspiration for this project from Brian Design.
 
 
