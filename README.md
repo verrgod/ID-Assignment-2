@@ -93,11 +93,15 @@ As explained from the introduction, this is a website that allows any user with 
       
     * Modal form scroll bar - the email pop up form on the homepage is not supposed to have a scrollbar, because with it the page will look very weird. It was an interesting bug but I managed to fix it by adjusting the maximum width both for the webpage as well as for @media screen and (max-wdith: 576px), removing the scrollbar when the modal pop up form appears.
     
-* Credits
+# Credits
   * Content
     * Header, modal form, footer - https://www.youtube.com/playlist?list=PLs1fqgQpnCmJ018jq-A3Ra9GrFWcPgOc1
     * Terms of service - https://www.termsofservicegenerator.net/#wizard
     * Privacy policy - https://www.privacypolicygenerator.info
+    * Current location service - https://docs.mapbox.com/mapbox-gl-js/example/locate-user/
+    * Map navigation controls - https://docs.mapbox.com/mapbox-gl-js/example/navigation/
+    * Geocoder (search bar) - https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/
+    * Directions - https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-directions/
     
   * Media
     * Images used on this site were obtained from https://undraw.co
