@@ -110,6 +110,47 @@
     width: 100%;
 }
 
+.directions-btn {
+    font-size: 1rem;
+    background-color: red;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.directions-btn a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+}
+
+.directions-btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.35s;
+    border-radius: 4px;
+    background: rgb(32, 109, 197);
+}
+
+.directions-btn:hover {
+    color: white;
+}
+
+.directions-btn:hover:after {
+    width: 100%;
+}
+
 .main-btn {
     font-size: 1rem;
     background-color: red;
