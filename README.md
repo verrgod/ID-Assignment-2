@@ -115,8 +115,9 @@ As explained from the introduction, this is a website that allows any user with 
     * Modal form scroll bar - the email pop up form on the homepage is not supposed to have a scrollbar, because with it the page will look very weird. It was an interesting bug but I managed to fix it by adjusting the maximum width both for the webpage as well as for @media screen and (max-wdith: 576px), removing the scrollbar when the modal pop up form appears.
 
 # Deployment 
-  * Page deployed here - PAGE LINK HERE
-  * The deployed version here on GitHub and the development version is actually the same. I have been using the same API key since I started working on this project, and have always pushed commits to the same branch. Running my code locally can be done in two ways: opening the folder via a source-code editor such as Visual Studio Code, or simply by just opening any of the .html files in the folder.
+  * Page deployed here - https://verrgod.github.io/ID-Assignment-2/
+  * The deployed version here on GitHub and the development version are different. Deploying the repo as a GitHub page caused a problem; GitHub could not find the index.html file in the /root folder. So the page only displayed the README.md file. Thus, I had to shift the .html files outside to the main branch in order for my GitHub page to work. I have been using the same API key since I started working on this project, and have always pushed commits to the same branch. Running my code locally can be done in two ways: opening the folder via a source-code editor such as Visual Studio Code, or simply by just opening any of the .html files in the folder.
+  
   * Downloading this website locally:
     * Register for an account on GitHub and clone the project.
     * Then simply download the code and open the website via a source-code editor or clicking on the .html files.
