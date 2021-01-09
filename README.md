@@ -12,10 +12,18 @@ As explained from the introduction, this is a website that allows any user with 
  
 * As the website owner,
   * I want to get the user to be able to find their way to different destinations, and also to find their current location so that they do not get lost.
-  
+
+* Wireframe was designed with Adobe XD (designed for desktop and mobile resolutions) - file is found in my repo.
+
 # Features
 
 * Existing Features
+  * Hamburger menu
+    * When website is viewed on the phone size resolution, the header joins to form a hamburger menu that collapses and has an open/close animation when the button is clicked.
+  
+  * Website responsiveness
+    * The whole website is designed to be on computer/desktop/phone. Images are undisplayed when the website is in phone sized resolution.
+    
   * Homepage (index.html)
     * Direct buttons - allows users to access the service and directions page by clicking on buttons on the homepage.
     * Email modal popup with form validation - allows users to signup for a weekly newsletter, by having them fill out a modal email validated pop up form.
@@ -29,7 +37,7 @@ As explained from the introduction, this is a website that allows any user with 
 
 * Features left to implement
   * Homepage (index.html)
-    * Register/login modal popup - allows users to sign up or login via a modal pop up register/login page by having them input correct data.
+    * Register/login modal popup - allows users to sign up or login via a modal pop up register/login page by having them input correct data. After the user is logged in, they can see the service and directions page on the header (basically they can access the pages only if they are logged in, and the website checks for their log in status).
    
   * Service page (service.html)
     * Automatic POI finder - allows users to find points of interest (POIs) near them automatically by clicking on the location button to find their current location.
@@ -37,11 +45,23 @@ As explained from the introduction, this is a website that allows any user with 
   * Directions page (directions.html)
     * Input current location as starting destination - allows users to input their current location as the starting destination by clicking on a popup called "Use current location" 
     
-* Technologies used
+# Technologies used
   * Mapbox - https://www.mapbox.com
     * This project uses Mapbox's API (mainly geolocation and navigation) to implement the main service of the website (service and directions page), which was already explained above.
+    * Mapbox CSS and JS for the map on my service and directions page.
     
-# Testing 
+  * HTML, CSS and JS for the whole website. Specifically:
+    * JS for the hamburger menu and modal pop up form.
+    * HTML to create the foundation of the website.
+    * CSS to spicen and make the website pretty.
+  
+  * Adobe XD - to design my wireframe 
+    
+# Testing
+  * Automated Testing
+    * W3C MarkUp Validation - https://validator.w3.org
+    * W3C CSS Validation - https://jigsaw.w3.org/css-validator/
+    
   * Newsletter modal popup form
     * Go to the homepage
     * Try to submit an empty form and verify that error messages about the required fields appears
@@ -75,10 +95,11 @@ As explained from the introduction, this is a website that allows any user with 
     * Try to enter a starting location anywhere outside of Singapore and verify that the map does not zoom out beyond Singapore, and so the location is not seen on the map
     * Try to enter a destination anywhere outside of Singapore and verify that the map does not zoom out beyond Singapore, and so the location is not seen on the map
     
-  * Hamburger header
+  * Hamburger mobile menu
     * Go to any page
     * Try to visit the page on a phone or preview it in phone web resolution and verify that a hamburger menu replaces the web header
     * Try to click on the different buttons on the hamburger header and verify that each subheader should be working correctly and bringing you to the correct pages
+    * Try to close the hamburger menu and verify that the close button has an animation to open/close
   
   * Images on website
     * Go to any page with images
@@ -92,6 +113,13 @@ As explained from the introduction, this is a website that allows any user with 
       * With this implementation I tried to use the user's current location as the starting location, but I was not able to fix this problem and also would not know how to display "Use current location" as a pop up on the search bar.
       
     * Modal form scroll bar - the email pop up form on the homepage is not supposed to have a scrollbar, because with it the page will look very weird. It was an interesting bug but I managed to fix it by adjusting the maximum width both for the webpage as well as for @media screen and (max-wdith: 576px), removing the scrollbar when the modal pop up form appears.
+
+# Deployment 
+  * Page deployed here - PAGE LINK HERE
+  * The deployed version here on GitHub and the development version is actually the same. I have been using the same API key since I started working on this project, and have always pushed commits to the same branch. Running my code locally can be done in two ways: opening the folder via a source-code editor such as Visual Studio Code, or simply by just opening any of the .html files in the folder.
+  * Downloading this website locally:
+    * Register for an account on GitHub and clone the project.
+    * Then simply download the code and open the website via a source-code editor or clicking on the .html files.
     
 # Credits
   * Content
@@ -107,6 +135,6 @@ As explained from the introduction, this is a website that allows any user with 
     * Images used on this site were obtained from https://undraw.co
     
   * Acknowledgements
-    * I received inspiration for this project from Brian Design.
+    * I received inspiration for this project from Brian Design for sharing his YouTube HTML, CSS, JS tutorials on YouTube which I credited above.
 
 
