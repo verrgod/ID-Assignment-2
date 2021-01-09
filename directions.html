@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="ID_S10206142_Vernon Goh Chee Kiat_Assg2_Website/css/style.css">
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css"/>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css"/>
         <style>
 	        body { margin: 0; padding: 0; }
 	        #map { position: absolute; top: 6rem; bottom: 0; width: 100%; height: 80%; }
@@ -27,8 +29,8 @@
 
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-links">Home</a></li>
-                    <li><a href="#" class="nav-links">Service</a></li>
-                    <li><a href="directions.html" class="nav-links">Directions</a></li>
+                    <li><a href="service.html" class="nav-links">Service</a></li>
+                    <li><a href="#" class="nav-links">Directions</a></li>
                     <li><a href="contact.html" class="nav-links">Contact Us</a></li>
                     <li><a href="about.html" class="nav-links">About Us</a></li>
                 </ul>
@@ -53,7 +55,7 @@
             var bounds = [[103.537731087, 1.153965446], [104.406654211, 1.470309806]];
             map.setMaxBounds(bounds);
 
-        // Add zoom and rotation controls to the map.
+        // Add zoom and rotation controls to the map
             map.addControl(new mapboxgl.NavigationControl('top-right'));
 
         // Finding current location
@@ -65,28 +67,13 @@
                     trackUserLocation: true
                 })
             );
-        // Search bar for places in Singapore
-            var geocoder = new MapboxGeocoder({
-                accessToken: mapboxgl.accessToken,
-                placeholder: 'Search for places in SG',
-                mapboxgl: mapboxgl,
-                marker: true,
-                bbox: [103.537731087, 1.153965446, 104.406654211, 1.470309806],
-            });
-            map.addControl(geocoder, 'top-left');
-            map.on('load', function(){
-                map.addSource('single-point', {
-                    type: 'geojson',
-                    data: {
-                        type: 'FeatureCollection',
-                        features: [],
-                    }
-                });
-
-                geocoder.on('result', function(e) {
-                    map.getSource('single-point').setData(e.result.geometry);
-                });
-            });
+        // Direction bar for places in the world
+            map.addControl(
+                new MapboxDirections({
+                    accessToken: mapboxgl.accessToken
+                }),
+                'top-left'
+            );  
         </script>
         <div class="main">
             <div class="main-container">
@@ -114,6 +101,6 @@
                 </div>
             </div>
         </div>
-        <script src="script.js"></script>
+        <script src="ID_S10206142_Vernon Goh Chee Kiat_Assg2_Website/script.js"></script>
     </body>
 </html>
